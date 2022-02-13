@@ -1,0 +1,15 @@
+syntax="proto3";
+option go_package = "github.com/jamshoot66/envoy-grpc-example/example";
+package example;
+
+message EchoRequest {
+  string msg = 1;
+}
+
+message EchoResponse {
+  string echo = 1;
+}
+
+service Example {
+  rpc echo(EchoRequest) returns (EchoResponse) {}
+}
